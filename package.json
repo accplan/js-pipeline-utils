@@ -1,0 +1,23 @@
+{
+  "name": "js-pipeline-utils",
+  "version": "0.1.0",
+  "description": "useful functions meant to be used with pipeline operator",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --maxWorkers=50%",
+    "test:ci": "jest --runInBand"
+  },
+  "keywords": [
+    "pipeline",
+    "objects",
+    "filter"
+  ],
+  "author": "accplan <accplan@rambler.ru>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/plugin-proposal-pipeline-operator": "^7.15.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "jest": "^27.0.6"
+  }
+}
