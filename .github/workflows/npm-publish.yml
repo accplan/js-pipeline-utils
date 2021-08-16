@@ -29,14 +29,14 @@ jobs:
         with:
           node-version: 14
           registry-url: https://registry.npmjs.org/
-      - run: npm i fsevents@latest -f --save-optional
+      - run: npm i fsevents@latest -f --save-dev
       - run: npm ci
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
   publish-gpr:
-    needs: build
+    needs: publish-npm
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -47,7 +47,7 @@ jobs:
         with:
           node-version: 14
           registry-url: https://npm.pkg.github.com/
-      - run: npm i fsevents@latest -f --save-optional
+      - run: npm i fsevents@latest -f --save-dev
       - run: npm ci
       - run: npm publish
         env:
