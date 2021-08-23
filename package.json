@@ -1,6 +1,6 @@
 {
   "name": "js-pipeline-utils",
-  "version": "0.1.3",
+  "version": "0.1.4-0",
   "description": "useful functions meant to be used with pipeline operator",
   "main": "lib/index.js",
   "files": [
