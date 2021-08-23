@@ -34,7 +34,7 @@ jobs:
       - run: npm i fsevents@latest -f --save-dev
       - run: npm ci
       - run: npm run build
-      - run: npm version patch
+      - run: npm version --no-git-tag-version prepatch
       - run: npm publish --tag testing
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
